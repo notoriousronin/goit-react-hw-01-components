@@ -5,6 +5,9 @@ const Statistics = ({ title, stats }) => {
 
       <ul class="stat-list">
         <li class="item">
+          {stats.map(({ id, label, percentage }) => (
+            <Stat key={id} label={label} percentage={percentage} />
+          ))}
           <span class="label">.docx</span>
           <span class="percentage">4%</span>
         </li>
