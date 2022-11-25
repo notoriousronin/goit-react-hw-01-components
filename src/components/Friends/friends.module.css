@@ -1,0 +1,26 @@
+/* .online {
+  display: block;
+  border-radius: 50%;
+
+  width: 20px;
+  height: 20px;
+  background-color: green;
+}
+
+.offline {
+  display: block;
+  border-radius: 50%;
+
+  width: 20px;
+  height: 20px;
+  background-color: brown;
+} */
+
+.offline {
+  display: block;
+  margin: 0 auto;
+
+  width: 555px;
+  height: 555px;
+  background-color: brown;
+}
