@@ -1,3 +1,14 @@
+import {
+  MainBox,
+  UserName,
+  Card,
+  Photo,
+  Tag,
+  Location,
+  StatList,
+  ListItem,
+} from './profile.styled';
+
 const Profile = ({
   username,
   tag,
@@ -6,29 +17,29 @@ const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="Profile Avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <MainBox>
+      <Photo src={avatar} alt="Profile Avatar" />
+      <Card>
+        <UserName>{username}</UserName>
+        <Tag>{tag}</Tag>
+        <Location>{location}</Location>
+      </Card>
 
-      <ul class="stats">
-        <li>
+      <StatList>
+        <ListItem>
           <span class="label">Followers: </span>
           <span class="quantity">{followers}</span>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <span class="label">Views: </span>
           <span class="quantity">{views}</span>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <span class="label">Likes: </span>
           <span class="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+        </ListItem>
+      </StatList>
+    </MainBox>
   );
 };
 

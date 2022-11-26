@@ -1,6 +1,6 @@
 import styles from './friends.module.css';
 
-const Friends = ({ friends }) => {
+const FriendList = ({ friends }) => {
   return (
     <ul class="friend-list">
       {friends.map(({ id, avatar, name, isOnline }) => (
@@ -14,4 +14,4 @@ const Friends = ({ friends }) => {
   );
 };
 
-export default Friends;
+export default FriendList;

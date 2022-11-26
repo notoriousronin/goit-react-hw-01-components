@@ -4,7 +4,7 @@ import user from 'dataJSON/user.json';
 import data from 'dataJSON/data.json';
 import GlobalStyles from './GlobalStyles';
 import friends from 'dataJSON/friends.json';
-import Friends from './Friends/friends';
+import FriendList from './FriendList/friendList';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 import transactions from 'dataJSON/transactions.json';
 
@@ -19,7 +19,7 @@ export default function App() {
         stats={user.stats}
       />
       <TransactionHistory items={transactions} />;
-      <Friends friends={friends} />
+      <FriendList friends={friends} />
       <Statistics title="Upload stats" stats={data} />
       <GlobalStyles />
     </div>
