@@ -7,6 +7,7 @@ import {
   Location,
   StatList,
   ListItem,
+  Quantity,
 } from './profile.styled';
 
 const Profile = ({
@@ -28,15 +29,15 @@ const Profile = ({
       <StatList>
         <ListItem>
           <span class="label">Followers: </span>
-          <span class="quantity">{followers}</span>
+          <Quantity class="quantity">{followers}</Quantity>
         </ListItem>
         <ListItem>
           <span class="label">Views: </span>
-          <span class="quantity">{views}</span>
+          <Quantity class="quantity">{views}</Quantity>
         </ListItem>
         <ListItem>
           <span class="label">Likes: </span>
-          <span class="quantity">{likes}</span>
+          <Quantity class="quantity">{likes}</Quantity>
         </ListItem>
       </StatList>
     </MainBox>

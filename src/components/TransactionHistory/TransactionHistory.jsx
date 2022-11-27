@@ -1,23 +1,28 @@
+import { MainBox } from 'components/Profile/profile.styled';
+import { Table, Row, Data } from './transactionHistory.styled';
+
 const TransactionHistory = ({ items }) => {
   return (
-    <table class="transaction-history">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
-      <tbody>
-        {items.map(({ id, type, currency, amount }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <MainBox>
+      <Table>
+        <thead>
+          <Row>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
+          </Row>
+        </thead>
+        <tbody>
+          {items.map(({ id, type, currency, amount }) => (
+            <Row key={id}>
+              <Data>{type}</Data>
+              <Data>{amount}</Data>
+              <Data>{currency}</Data>
+            </Row>
+          ))}
+        </tbody>
+      </Table>
+    </MainBox>
   );
 };
 
