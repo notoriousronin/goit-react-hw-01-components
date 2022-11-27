@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { MainBox } from 'components/Profile/profile.styled';
 import { Table, Row, Data } from './transactionHistory.styled';
 
@@ -24,6 +25,17 @@ const TransactionHistory = ({ items }) => {
       </Table>
     </MainBox>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      amount: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default TransactionHistory;

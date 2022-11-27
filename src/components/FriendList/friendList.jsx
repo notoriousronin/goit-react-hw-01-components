@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { MainBox } from 'components/Profile/profile.styled';
 import { FriendsList, MyFriend } from './friends.styled';
 import styles from './friends.module.css';
@@ -16,6 +17,17 @@ const FriendList = ({ friends }) => {
       </FriendsList>
     </MainBox>
   );
+};
+
+FriendsList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.exact({
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default FriendList;
