@@ -10,8 +10,8 @@ const FriendList = ({ friends }) => {
         {friends.map(({ id, avatar, name, isOnline }) => (
           <FriendListItem
             key={id}
-            src={avatar}
-            alt={name}
+            avatar={avatar}
+            name={name}
             isOnline={isOnline}
           />
         ))}

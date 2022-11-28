@@ -22,10 +22,7 @@ export const MyFriend = styled.li`
 `;
 
 export const FriendsStatus = styled.span`
-  background-color: ${props =>
-    props.isOnline
-      ? props.theme.colors.statusGreen
-      : props.theme.colors.statusRed};
+  background-color: ${props => (props.isOnline ? 'green' : 'brown')};
   display: block;
   border-radius: 50%;
   width: 20px;
