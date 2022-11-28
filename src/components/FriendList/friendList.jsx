@@ -1,25 +1,26 @@
 import PropTypes from 'prop-types';
+import FriendListItem from 'components/FriendListItem/friendListItem';
 import { MainBox } from 'components/Profile/profile.styled';
-import { FriendsList, MyFriend } from './friends.styled';
-import styles from './friends.module.css';
+import { StyledFriendsList } from './friends.styled';
 
 const FriendList = ({ friends }) => {
   return (
     <MainBox>
-      <FriendsList class="friend-list">
+      <StyledFriendsList>
         {friends.map(({ id, avatar, name, isOnline }) => (
-          <MyFriend key={id} class="item">
-            <span className={isOnline ? styles.online : styles.offline}></span>
-            <img class="avatar" src={avatar} alt={name} width="48" />
-            <p class="name">{name}</p>
-          </MyFriend>
+          <FriendListItem
+            key={id}
+            src={avatar}
+            alt={name}
+            isOnline={isOnline}
+          />
         ))}
-      </FriendsList>
+      </StyledFriendsList>
     </MainBox>
   );
 };
 
-FriendsList.propTypes = {
+FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.exact({
       isOnline: PropTypes.bool.isRequired,

@@ -1,10 +1,13 @@
-const FriendListItem = ({ avatar, name, isOnline }) => {
+import { MyFriend } from './friends.styled';
+// import styles from './friends/module.css';
+
+const FriendListItem = ({ avatar, name, isOnline, id }) => {
   return (
-    <li class="item">
-      <span class="status">{isOnline}</span>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
-    </li>
+    <MyFriend key={id}>
+      {/* <span className={isOnline ? styles.online : styles.offline}></span> */}
+      <img src={avatar} alt={name} width="48" />
+      <p>{name}</p>
+    </MyFriend>
   );
 };
 
