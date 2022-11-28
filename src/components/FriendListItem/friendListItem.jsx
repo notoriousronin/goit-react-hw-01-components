@@ -1,5 +1,4 @@
-import { MyFriend } from './friends.styled';
-
+import { MyFriend } from 'components/FriendList/friends.styled';
 import { FriendsStatus } from 'components/FriendList/friends.styled';
 
 const FriendListItem = ({ avatar, name, isOnline, id }) => {
