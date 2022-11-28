@@ -1,10 +1,11 @@
 import { MyFriend } from './friends.styled';
-// import styles from './friends/module.css';
+
+import { FriendsStatus } from 'components/FriendList/friends.styled';
 
 const FriendListItem = ({ avatar, name, isOnline, id }) => {
   return (
     <MyFriend key={id}>
-      {/* <span className={isOnline ? styles.online : styles.offline}></span> */}
+      <FriendsStatus isOnline={isOnline}></FriendsStatus>
       <img src={avatar} alt={name} width="48" />
       <p>{name}</p>
     </MyFriend>

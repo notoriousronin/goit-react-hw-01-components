@@ -20,3 +20,14 @@ export const MyFriend = styled.li`
   width: 100%;
   justify-content: space-around;
 `;
+
+export const FriendsStatus = styled.span`
+  background-color: ${props =>
+    props.isOnline
+      ? props.theme.colors.statusGreen
+      : props.theme.colors.statusRed};
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+`;
